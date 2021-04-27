@@ -2,9 +2,9 @@
   <div id="app">
     <Header/>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <Temperature>
+      <div class="row mx-auto justify-content-center">
+        <div class="col ">
+          <Card>
             <template v-slot:title>
               <span class="banner">Temperature</span>
             </template>
@@ -16,11 +16,53 @@
               <p class="sub-title">Outside</p>
               <p class="value">25&#176;C</p>
             </template>
-          </Temperature>
+          </Card>
         </div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
+        <div class="col">
+          <Card>
+              <template v-slot:title>
+                <span class="banner">Humidity</span>
+              </template>
+              <template v-slot:warehouse>
+                <p class="sub-title">Warehouse</p>
+                <p class="value">25&#176;C</p>
+              </template>
+              <template v-slot:outside>
+                <p class="sub-title">Outside</p>
+                <p class="value">25&#176;C</p>
+              </template>
+          </Card>
+        </div>
+        <div class="col">
+          <Card>
+            <template v-slot:title>
+              <span class="banner">Moisture</span>
+            </template>
+            <template v-slot:warehouse>
+              <p class="sub-title">Warehouse</p>
+              <p class="value">25&#176;C</p>
+            </template>
+            <template v-slot:outside>
+              <p class="sub-title">Outside</p>
+              <p class="value">25&#176;C</p>
+            </template>
+          </Card>
+        </div>
+        <div class="col">
+           <Card>
+            <template v-slot:title>
+              <span class="banner">Soil pH</span>
+            </template>
+            <template v-slot:warehouse>
+              <p class="sub-title">Warehouse</p>
+              <p class="value">25&#176;C</p>
+            </template>
+            <template v-slot:outside>
+              <p class="sub-title">Outside</p>
+              <p class="value">25&#176;C</p>
+            </template>
+          </Card>
+        </div>
       </div>
     </div>
   </div>
@@ -28,10 +70,10 @@
 
 <script>
 import Header from './components/Header.vue'
-import Temperature from './components/Temperature.vue'
+import Card from './components/Card.vue'
 
 export default {
-  components: { Header, Temperature },
+  components: { Header, Card },
   name: 'App'
 }
 </script>

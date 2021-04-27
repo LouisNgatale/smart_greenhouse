@@ -1,5 +1,5 @@
 <template>
-    <div class="widget">
+    <div class="widget mx-auto">
         <div class="p-2">
             <!-- <span class="banner">Temperature</span> -->
             <slot name="title"/>
