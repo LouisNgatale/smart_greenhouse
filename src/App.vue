@@ -18,12 +18,15 @@
       </div>
     </div>
     <div class="container-fluid my-3">
-      <div class="row">
+      <div class="row  align-items-between">
         <div class="col">
            <Card theme="water_level"/>
         </div>
         <div class="col">
-
+            <div class="contents">
+              <Irrigation/>
+              <Ventilation/>
+            </div>
         </div>
         <div class="col-6">
 
@@ -36,9 +39,11 @@
 <script>
 import Header from './components/Header.vue'
 import Card from './components/Card.vue'
+import Irrigation from './components/Irrigation.vue'
+import Ventilation from './components/Ventilation.vue'
 
 export default {
-  components: { Header, Card },
+  components: { Header, Card, Irrigation, Ventilation },
   name: 'App'
 }
 </script>
@@ -49,5 +54,12 @@ export default {
   min-height: 100vh;
   color: white;
   font-family: 'Open Sans', sans-serif;
+}
+.contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+
 }
 </style>
