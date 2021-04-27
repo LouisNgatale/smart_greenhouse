@@ -5,6 +5,7 @@
             humidity: theme === 'humidity',
             moisture: theme === 'moisture',
             ph: theme === 'ph',
+            water_level: theme === 'water_level',
         }">
         <div class="p-2">
             <span class="banner">Temperature</span>
@@ -143,7 +144,7 @@ p{
     &:hover{
         cursor: pointer;
         background: rgb(8,8,9);
-        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
+        background: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(36,27,21,1) 100%);
         box-shadow: 0px 4px 40px rgba($color: #C87A49, $alpha: .3);
         transition: all .4s;
     }
@@ -159,7 +160,7 @@ p{
     height: 250px;
     width: 240px;
     border-radius: 19px;
-    border: 1px $orange solid;
+    border: 1px $cyan solid;
     background-color: rgb(6,6,9);
     background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
     transition: all .4s;
@@ -167,13 +168,38 @@ p{
     padding: 10px 10px;
     &:hover{
         cursor: pointer;
-        background: rgb(8,8,9);
-        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
-        box-shadow: 0px 4px 40px rgba($color: #BC7F16, $alpha: .3);
+        background: rgb(6,6,9);
+        background: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #36BBA8, $alpha: .3);
         transition: all .4s;
     }
     .banner{
-        border: 1px $orange solid;
+        border: 1px $cyan solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+        background: #0C0F1C;
+    }
+}
+.widget.water_level{
+    height: 250px;
+    width: 240px;
+    border-radius: 19px;
+    border: 1px $purple solid;
+    background-color: rgb(6,6,9);
+    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+    transition: all .4s;
+    transition: background-color 0.5s ease;
+    padding: 10px 10px;
+    &:hover{
+        cursor: pointer;
+        background: rgb(6,6,9);
+        background: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #5D46EE, $alpha: .3);
+        transition: all .4s;
+    }
+    .banner{
+        border: 1px $purple solid;
         border-radius: 5px;
         padding: 5px 8px;
         font-size: 12px;

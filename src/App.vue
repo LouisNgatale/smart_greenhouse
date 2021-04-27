@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <div class="container-fluid">
-      <div class="row justify-content-center">
+      <div class="row justify-content-between">
         <div class="col ">
           <Card theme="temperature"/>
         </div>
@@ -14,6 +14,19 @@
         </div>
         <div class="col">
            <Card theme="ph"/>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid my-3">
+      <div class="row">
+        <div class="col">
+           <Card theme="water_level"/>
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col-6">
+
         </div>
       </div>
     </div>
