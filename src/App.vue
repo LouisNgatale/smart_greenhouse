@@ -4,7 +4,19 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <Temperature/>
+          <Temperature>
+            <template v-slot:title>
+              <span class="banner">Temperature</span>
+            </template>
+            <template v-slot:warehouse>
+              <p class="sub-title">Warehouse</p>
+              <p class="value">25&#176;C</p>
+            </template>
+            <template v-slot:outside>
+              <p class="sub-title">Outside</p>
+              <p class="value">25&#176;C</p>
+            </template>
+          </Temperature>
         </div>
         <div class="col"></div>
         <div class="col"></div>

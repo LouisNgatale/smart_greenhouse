@@ -1,18 +1,20 @@
 <template>
     <div class="widget">
         <div class="p-2">
-            <span class="banner">Temperature</span>
+            <!-- <span class="banner">Temperature</span> -->
+            <slot name="title"/>
         </div>
-        <div class="mx-2 my-2 icon">
+        <div class="mx-2 my-3 icon">
             <img src="@/assets/icons/temperature.svg" alt="">
         </div>
-        <div class="mx-2 my-2 container-fluid">
+        <div class="my-2 container-fluid ">
             <div class="row">
-                <div class="col">
-                    <p class="sub-title">Warehouse</p>
-                    <p class="value">25&#176;C</p>
+                <div class="col warehouse">
+                    <slot name="warehouse"/>
                 </div>
-                <div class="col">1</div>
+                <div class="col outside">
+                    <slot name="outside"/>
+                </div>
             </div>
         </div>
     </div>
@@ -25,6 +27,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-fluid{
+    padding: 0 5px;
+}
 p{
     margin: 0;
 }
@@ -70,8 +75,14 @@ p{
     }
     .value{
         color: $grey;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
+    }
+    .outside{
+        text-align: left;
+    }
+    .warehouse{
+        text-align: right;
     }
 }
 
