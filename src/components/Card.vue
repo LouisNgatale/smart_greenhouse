@@ -1,8 +1,13 @@
 <template>
-    <div class="widget mx-auto">
+    <div class="widget mx-auto" 
+        :class="{
+            temperature: theme === 'temperature',
+            humidity: theme === 'humidity',
+            moisture: theme === 'moisture',
+            ph: theme === 'ph',
+        }">
         <div class="p-2">
-            <!-- <span class="banner">Temperature</span> -->
-            <slot name="title"/>
+            <span class="banner">Temperature</span>
         </div>
         <div class="mx-2 my-3 icon">
             <img src="@/assets/icons/temperature.svg" alt="">
@@ -10,10 +15,12 @@
         <div class="my-2 container-fluid ">
             <div class="row">
                 <div class="col warehouse">
-                    <slot name="warehouse"/>
+                    <p class="sub-title">Warehouse</p>
+                    <p class="value">25&#176;C</p>
                 </div>
                 <div class="col outside">
-                    <slot name="outside"/>
+                    <p class="sub-title">Outside</p>
+                    <p class="value">25&#176;C</p>
                 </div>
             </div>
         </div>
@@ -22,6 +29,9 @@
 
 <script>
 export default {
+    props:[
+        'theme'
+    ]
     
 }
 </script>
@@ -37,27 +47,11 @@ p{
     height: 250px;
     width: 240px;
     border-radius: 19px;
-    border: 1px $orange solid;
-    background-color: rgb(6,6,9);
-    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
     transition: all .4s;
     transition: background-color 0.5s ease;
     padding: 10px 10px;
-    &:hover{
-        cursor: pointer;
-        background: rgb(8,8,9);
-        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
-        box-shadow: 0px 4px 40px rgba($color: #BC7F16, $alpha: .3);
-        transition: all .4s;
-    }
 
-    .banner{
-        border: 1px $orange solid;
-        border-radius: 5px;
-        padding: 5px 8px;
-        font-size: 12px;
-        background: #0C0F1C;
-    }
+    
 
     .icon{
         display: flex;
@@ -86,4 +80,104 @@ p{
     }
 }
 
+.widget.temperature{
+    height: 250px;
+    width: 240px;
+    border-radius: 19px;
+    border: 1px $orange solid;
+    background-color: rgb(6,6,9);
+    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+    transition: all .4s;
+    transition: background-color 0.5s ease;
+    padding: 10px 10px;
+    &:hover{
+        cursor: pointer;
+        background: rgb(8,8,9);
+        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #BC7F16, $alpha: .3);
+        transition: all .4s;
+    }
+    .banner{
+        border: 1px $orange solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+        background: #0C0F1C;
+    }
+}
+.widget.humidity{
+    height: 250px;
+    width: 240px;
+    border-radius: 19px;
+    border: 1px $cyan solid;
+    background-color: rgb(6,6,9);
+    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+    transition: all .4s;
+    transition: background-color 0.5s ease;
+    padding: 10px 10px;
+    &:hover{
+        cursor: pointer;
+        background: rgb(6,6,9);
+        background: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #36BBA8, $alpha: .3);
+        transition: all .4s;
+    }
+    .banner{
+        border: 1px $cyan solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+        background: #0C0F1C;
+    }
+}
+.widget.moisture{
+    height: 250px;
+    width: 240px;
+    border-radius: 19px;
+    border: 1px $brown solid;
+    background-color: rgb(6,6,9);
+    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+    transition: all .4s;
+    transition: background-color 0.5s ease;
+    padding: 10px 10px;
+    &:hover{
+        cursor: pointer;
+        background: rgb(8,8,9);
+        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #C87A49, $alpha: .3);
+        transition: all .4s;
+    }
+    .banner{
+        border: 1px $brown solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+        background: #0C0F1C;
+    }
+}
+.widget.ph{
+    height: 250px;
+    width: 240px;
+    border-radius: 19px;
+    border: 1px $orange solid;
+    background-color: rgb(6,6,9);
+    background-color: linear-gradient(39deg, rgba(6,6,9,1) 0%, rgba(14,18,36,1) 100%);
+    transition: all .4s;
+    transition: background-color 0.5s ease;
+    padding: 10px 10px;
+    &:hover{
+        cursor: pointer;
+        background: rgb(8,8,9);
+        background-color: linear-gradient(39deg, rgba(8,8,9,1) 0%, rgba(15,12,10,1) 100%);
+        box-shadow: 0px 4px 40px rgba($color: #BC7F16, $alpha: .3);
+        transition: all .4s;
+    }
+    .banner{
+        border: 1px $orange solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+        background: #0C0F1C;
+    }
+}
 </style>

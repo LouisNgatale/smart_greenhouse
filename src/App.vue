@@ -2,66 +2,18 @@
   <div id="app">
     <Header/>
     <div class="container-fluid">
-      <div class="row mx-auto justify-content-center">
+      <div class="row justify-content-center">
         <div class="col ">
-          <Card>
-            <template v-slot:title>
-              <span class="banner">Temperature</span>
-            </template>
-            <template v-slot:warehouse>
-              <p class="sub-title">Warehouse</p>
-              <p class="value">25&#176;C</p>
-            </template>
-            <template v-slot:outside>
-              <p class="sub-title">Outside</p>
-              <p class="value">25&#176;C</p>
-            </template>
-          </Card>
+          <Card theme="temperature"/>
         </div>
         <div class="col">
-          <Card>
-              <template v-slot:title>
-                <span class="banner">Humidity</span>
-              </template>
-              <template v-slot:warehouse>
-                <p class="sub-title">Warehouse</p>
-                <p class="value">25&#176;C</p>
-              </template>
-              <template v-slot:outside>
-                <p class="sub-title">Outside</p>
-                <p class="value">25&#176;C</p>
-              </template>
-          </Card>
+          <Card theme="humidity"/>
         </div>
         <div class="col">
-          <Card>
-            <template v-slot:title>
-              <span class="banner">Moisture</span>
-            </template>
-            <template v-slot:warehouse>
-              <p class="sub-title">Warehouse</p>
-              <p class="value">25&#176;C</p>
-            </template>
-            <template v-slot:outside>
-              <p class="sub-title">Outside</p>
-              <p class="value">25&#176;C</p>
-            </template>
-          </Card>
+          <Card theme="moisture"/>
         </div>
         <div class="col">
-           <Card>
-            <template v-slot:title>
-              <span class="banner">Soil pH</span>
-            </template>
-            <template v-slot:warehouse>
-              <p class="sub-title">Warehouse</p>
-              <p class="value">25&#176;C</p>
-            </template>
-            <template v-slot:outside>
-              <p class="sub-title">Outside</p>
-              <p class="value">25&#176;C</p>
-            </template>
-          </Card>
+           <Card theme="ph"/>
         </div>
       </div>
     </div>
