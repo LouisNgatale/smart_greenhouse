@@ -1,12 +1,19 @@
 <template>
   <div id="header">
-        <div class="heading">
+        <div class="heading mx-4 pt-4">
             <div class="icon">
                   <img src="../assets/icons/cloud.svg" alt="">
             </div>
-            <div class="status ">
+            <div class="status">
                 <div class="date">{{ date }} </div>
                 <div class="weather">Cloudy</div>
+            </div>
+        </div>
+        <div class="container-fluid my-3">
+            <div class="row px-2">
+                <div class="col title">
+                    <span>SMART GREENHOUSE DASHBOARD</span>
+                </div>
             </div>
         </div>
   </div>
@@ -43,18 +50,20 @@ export default {
 </script>
 
 <style lang="scss">
-
 .heading{
   display:flex;
   align-content: center;
   align-items: center;
   .icon{
-    margin-right: 5px;
-  }
-  .date{
+    margin-right: 10px;
   }
   .weather{
     font-weight: bold;
   }
+  
 }
+.title{
+    font-weight: bold;
+    font-size: 22px;
+  }
 </style>
